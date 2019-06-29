@@ -7,20 +7,17 @@ import { StatusBar } from '@ionic-native/status-bar';
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
 
-require('ngx-extended-pdf-viewer/assets/pdf.js');
-require('ngx-extended-pdf-viewer/assets/pdf.worker.js');
-require('ngx-extended-pdf-viewer/assets/web/viewer.js');
-import { NgxExtendedPdfViewerModule } from 'ngx-extended-pdf-viewer';
+import { NgxExtendedPdfViewerComponent} from "../components/ngx-extended-pdf-viewer/ngx-extended-pdf-viewer.component";
 
 @NgModule({
   declarations: [
     MyApp,
-    HomePage
+    HomePage,
+    NgxExtendedPdfViewerComponent
   ],
   imports: [
     BrowserModule,
-    IonicModule.forRoot(MyApp),
-    NgxExtendedPdfViewerModule
+    IonicModule.forRoot(MyApp)
   ],
   bootstrap: [IonicApp],
   entryComponents: [
